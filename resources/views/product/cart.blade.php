@@ -107,7 +107,7 @@
 									<div class="cart_total_value ml-auto">Rp.{{number_format($data[0]['subtotal'], 0, ".", ".")}}</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Pengiriman dan karantina</div>
+									<div class="cart_total_title">Pengiriman pulau jawa<br>(4-7hari)</div>
 									<div class="cart_total_value ml-auto">Rp.{{number_format($data[0]['ongkir'], 0, ".", ".")}}</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">

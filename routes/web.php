@@ -30,7 +30,7 @@ Route::get('/', function () {
             ),200,[]);
         }
 
-	$product = DB::table('products')->paginate(8);
+	$product = DB::table('products')->orderBy("created_at","desc")->paginate(8);
 	// dd($product);
     return view('home/index',['product' => $product]);
 });

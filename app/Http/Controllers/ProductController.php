@@ -153,8 +153,32 @@ return $request->get('nomor').$randomString;
                 $items1[] = $items[$i]['price'];
                 $i++;
                 }
+                $ongkir = 25000;
+
+                    if (count($items1) == 1 || count($items1) == 2) {
+                        // dd($ongkir);
+
+                    }else{
+                        if (count($items1) % 2 == 0) {
+                            for ($i=0; $i < count($items1); $i += 2) { 
+                                
+                            }
+                             
+                            $sisa = $i / 2 - 1;
+                            $ongkir = 15000 * $sisa + $ongkir;
+                            // dd($ongkir);
+                        }else{
+                            for ($i=0; $i < count($items1); $i += 2) { 
+                                
+                            }
+                             
+                            $sisa = $i / 2 - 1;
+                            $ongkir = 15000 * $sisa + $ongkir;
+                            // dd($ongkir);
+                        }
+                    }
+
                 $subtotal = array_sum($items1);
-                $ongkir = 50000;
                 $total = $subtotal + $ongkir;
                 $data[0] = array(
                     'subtotal' => $subtotal,
@@ -228,8 +252,32 @@ return $request->get('nomor').$randomString;
                     $items1[] = $items[$i]['price'];
                     $i++;
                     }
+                    $ongkir = 25000;
+
+                    if (count($items1) == 1 || count($items1) == 2) {
+                        // dd($ongkir);
+
+                    }else{
+                        if (count($items1) % 2 == 0) {
+                            for ($i=0; $i < count($items1); $i += 2) { 
+                                
+                            }
+                             
+                            $sisa = $i / 2 - 1;
+                            $ongkir = 15000 * $sisa + $ongkir;
+                            // dd($ongkir);
+                        }else{
+                            for ($i=0; $i < count($items1); $i += 2) { 
+                                
+                            }
+                             
+                            $sisa = $i / 2 - 1;
+                            $ongkir = 15000 * $sisa + $ongkir;
+                            // dd($ongkir);
+                        }
+                    }
+
                     $subtotal = array_sum($items1);
-                    $ongkir = 50000;
                     $total = $subtotal + $ongkir;
                     $data[0] = array(
                         'subtotal' => $subtotal,

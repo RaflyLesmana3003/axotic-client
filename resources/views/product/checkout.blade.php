@@ -164,7 +164,7 @@
 									<div class="order_list_value ml-auto">Rp.{{number_format($data[0]['subtotal'], 0, ".", ".")}}</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="order_list_title">Biaya Pengiriman dan karantina</div>
+									<div class="order_list_title">Pengiriman pulau jawa<br>(4-7hari)</div>
 									<div class="order_list_value ml-auto">Rp.{{number_format($data[0]['ongkir'], 0, ".", ".")}}</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
