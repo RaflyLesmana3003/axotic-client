@@ -52,13 +52,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 							<div class="logo"><a href="{{url ('/')}}"><img src="{{ url('images/logo.png')}}" style="width: 100%;max-width: 100px;height: auto;" alt=""></a></div>
 							<nav class="main_nav">
 								<ul>
-									<li class="hassubs active">
-										<a href="{{url ('/')}}">Menu</a>
-										<ul>
-											<li><a href="{{url ('/')}}">Beranda</a></li>
-											<li><a href="{{url ('/list')}}">Produk</a></li>
-										</ul>
-									</li>
+									
 									<!-- <li><a href="#">Accessories</a></li>
 									<li><a href="#">Offers</a></li> -->
 									<li><a href="{{url ('/')}}">Beranda</a></li>
@@ -215,17 +209,18 @@ tr:nth-child(even){background-color: #f2f2f2}
 <script src="{{ url('plugins/easing/easing.js')}}"></script>
 <script src="{{ url('plugins/parallax-js-master/parallax.min.js')}}"></script>
 <script src="{{ url('js/custom.js')}}"></script>
-<script src="js/checkout.js"></script>
+<!-- <script src="js/checkout.js"></script>
 <script src="js/categories.js"></script>
 
-<script src="js/contact.js"></script>
+<script src="js/contact.js"></script> -->
 <!--Floating WhatsApp javascript-->
 <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 
 <script>
+	
 $(function() {
   $('#WAButton').floatingWhatsApp({
-    phone: '6283115510748', //WhatsApp Business phone number International format-
+    phone: '6287830644717', //WhatsApp Business phone number International format-
     //Get it with Toky at https://toky.co/en/features/whatsapp.
     headerTitle: 'Chat with us on WhatsApp!', //Popup Title
     popupMessage: 'halo saya butuh bantuan nih?', //Popup Message

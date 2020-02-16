@@ -175,6 +175,15 @@
 								@endif
 							</ul>
 						</div>
+						<div class="order_text">
+						Axolotl akan melalui proses karantina <b>2x24 jam</b> setelah transfer untuk keamanan pengiriman.<br><br>
+                            GARANSI 100% (s&k berlaku)<br>
+                            <b>1.</b> foto paket saat sampai<br>
+                            <b>2.</b>  vidio kan dari awal sampai hingga dibuka isinya<br>
+                            <b>3.</b>  kirim ke whatsapp admin atau story langsung tag ke instagram kita<br>
+                            <b>4.</b>  admin akan konfirmasi 1x24 jam untuk mengurus garansi<br>
+                            </p>
+							</div>
 						<input form="checkout_form" class="button order_button" type="submit" value="Place Order"></input>
 						<!-- Payment Options -->
 						<div class="payment">
@@ -199,7 +208,7 @@
 						</div>
 
 						<!-- Order Text -->
-						<div class="order_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra temp or so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</div>
+						
 						
 					</div>
 				</div>

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Darryldecode\Cart\CartCondition;
 use Illuminate\Notifications\Notifiable;
 use App\Notifications\email;
+use App\Notifications\emailcustomer;
 
 class ProductController extends Controller
 {
@@ -43,24 +44,26 @@ class ProductController extends Controller
                 ->where('code', $request->code)
                 ->update(['buktipembayaran' => $photo,'status' => 1]);
         }
+        
         $user = new User();
         $user->email = 'raflylesmana111@gmail.com';   // This is the email you want to send to.
         $user->notify(new email());
-        // $user = new User();
-        // $user->email = 'raflylesmana111@gmail.com';   // This is the email you want to send to.
-        // $user->notify(new email());
-        // $user = new User();
-        // $user->email = 'raflylesmana111@gmail.com';   // This is the email you want to send to.
-        // $user->notify(new email());
-        // $user = new User();
-        // $user->email = 'raflylesmana111@gmail.com';   // This is the email you want to send to.
-        // $user->notify(new email());
+        $user = new User();
+        $user->email = 'rantisetiani01@gmail.com';   // This is the email you want to send to.
+        $user->notify(new email());
+        $user = new User();
+        $user->email = 'dwisatriomh1999@gmail.com';   // This is the email you want to send to.
+        $user->notify(new email());
+        $user = new User();
+        $user->email = 'septiandirizur@gmail.com';   // This is the email you want to send to.
+        $user->notify(new email());
         return $request->code;
         
     }
     public function pembayaran($code)
     {
         # code...
+       
         $penjualan = DB::table('penjualans')->where("code","=",$code)->get();
         $pembayarans = DB::table('pembayarans')->where("code","=",$code)->get();
         $resi = DB::table('penjualans')->where("code","=",$code)->select('resi')->first();
@@ -106,6 +109,11 @@ class ProductController extends Controller
         for ($i = 0; $i < 5; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
+        $data=[
+            'kode' => $request->get('nomor').$randomString
+        ];
+        $user->email = $request->get('email');   // This is the email you want to send to.
+        $user->notify(new emailcustomer($data));
         
         DB::table('penjualans')->insert([[
             'nama' => $request->get('nama'),

@@ -50,6 +50,7 @@
                         $new_time = date($penjualans->updated_at, strtotime('+3 hours'));
                         
                         ?>
+                        <input type="hidden" id="email" value="{{$penjualans->total}}">
                         <div class="section_title">| transfer sebelum : <b>{{ date("d-M-Y h:i:s", strtotime($new_time))}} (3 jam)</b></div>
                         <div class="table-responsive">
                             <!--Table-->
@@ -101,7 +102,7 @@
 							<ul style="margin-top:0px;margin-left:10px;">
                             <form id="bayar">
 								<li style="width: 100%;">upload bukti pembayaran: <input required style="margin-top:30px;margin-left:30px;margin-bottom:30px;" type="file" name="buktibayar" id="buktibayar"></li>
-								<span id="tunggu" class="loading">sedang mengupload bukti bayar...</span>
+								<span id="tunggu" class="loading">mohon ditunggu, sedang mengupload bukti bayar...</span>
                                 <input type="hidden" name="code" id="code" value="{{$penjualans->code}}">
                                 <li style="width: 100%;"><input value="kirim bukti pembayaran" type="submit" id="kirim"></li>
                                 </form>
@@ -191,8 +192,8 @@
 						<div class="contact_info_section">
 							<div class="contact_info_title">Customer service</div>
 							<ul>
-								<li>whatsapp: <span>+53 345 7953 3245</span></li>
-								<li>instagram: <span>yourmail@gmail.com</span></li>
+								<li>whatsapp: <span><b>+62-8783-0644-717</b></span></li>
+								<li>instagram: <span><b>@axoticfarm</b></span></li>
 							</ul>
 						</div>
 					</div>
@@ -213,6 +214,7 @@ $('#bayar').submit(function(e) {
 
    formData.append('bukti', $('input[type=file]')[0].files[0]);
    formData.append("code",$('#code').val());
+   formData.append("email",$('#email').val());
 
 
     $.ajaxSetup({
